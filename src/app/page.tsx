@@ -11,7 +11,6 @@ const FinanceDashboard = () => {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     setShowNav(e.clientY < 50); // Show navigation bar when the cursor is near the top
   };
-  
 
   return (
     <div
@@ -57,42 +56,43 @@ const FinanceDashboard = () => {
       {/* Main Content */}
       <main className="flex-grow p-6">
         {/* Search Bar */}
-        <div className="mb-6 flex justify-center">
-          <input
-            type="text"
-            placeholder="Search here"
-            className={`w-1/4 p-2 text-sm rounded-md shadow-md ${
-              isDarkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-800"
-            }`}
-          />
-        </div>
+    <div className="mb-6 flex justify-center">
+    <input
+  type="text"
+  placeholder="Search"
+  className={`w-1/2 sm:w-1/2 p-2 text-sm rounded-md shadow-md placeholder:text-center ${
+    isDarkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-800"
+  }`}
+/>
+
+</div>
+
 
         {/* Dashboard Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {/* Total Balance */}
-          <div
-            className={`md:col-span-2 p-6 rounded-lg shadow-lg ${
+          <button
+            className={`md:col-span-2 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
               isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-
             }`}
           >
             <h3 className="text-lg font-bold">Total Balance</h3>
             <p className="text-3xl font-bold">$18,589.05</p>
-          </div>
+          </button>
 
           {/* Expenses */}
-          <div
-            className={`md:col-span-2 p-6 rounded-lg shadow-lg ${
+          <button
+            className={`md:col-span-2 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
               isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
             }`}
           >
             <h3 className="text-lg font-bold">Expenses</h3>
             <p className="text-3xl font-bold">$3,456.09</p>
-          </div>
+          </button>
 
           {/* Investing */}
-          <div
-            className={`md:col-span-2 p-6 rounded-lg shadow-lg ${
+          <button
+            className={`md:col-span-2 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
               isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
             }`}
           >
@@ -111,28 +111,27 @@ const FinanceDashboard = () => {
                 <span>25%</span>
               </li>
             </ul>
-          </div>
+          </button>
 
           {/* Income Graph */}
-          <div
-            className={`md:col-span-4 p-6 rounded-lg shadow-lg ${
+          <button
+            className={`md:col-span-4 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
               isDarkMode ? "bg-gray-800 text-gray-100" : "bg-white text-gray-800"
             }`}
           >
             <h3 className="text-lg font-bold">My Income</h3>
-            <p className="text-3xl font-bold">$34,589.05</p>
+            <p className="text-3xl font-bold text-white-400">$34,589.05</p>
             <div
               className={`mt-4 h-32 rounded-lg shadow-md ${
-                isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
+                isDarkMode ? "bg-gray-700" : "bg-gray-200"
               }`}
             ></div>
-          </div>
+          </button>
 
           {/* Account Insights */}
-          <div
-            className={`md:col-span-2 p-6 rounded-lg shadow-lg ${
+          <button
+            className={`md:col-span-2 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
               isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-
             }`}
           >
             <h3 className="text-lg font-bold">Account Insights</h3>
@@ -158,11 +157,11 @@ const FinanceDashboard = () => {
                 <span>47%</span>
               </li>
             </ul>
-          </div>
+          </button>
 
           {/* Transaction History */}
-          <div
-            className={`col-span-full p-6 rounded-lg shadow-lg ${
+          <button
+            className={`col-span-full p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
               isDarkMode ? "bg-gray-800 text-gray-100" : "bg-white text-gray-800"
             }`}
           >
@@ -185,7 +184,7 @@ const FinanceDashboard = () => {
                 <span>$1,200</span>
               </li>
             </ul>
-          </div>
+          </button>
         </div>
       </main>
 
